@@ -88,8 +88,9 @@ function draw() {
         default: break;
     }
   
-    if(keyDown("space")&&player.y>280 ) {
+    if((touches.length>0||keyDown("space"))&&player.y>280 ) {
       player.velocityY = -20;
+      touches =[];
     }
     player.velocityY = player.velocityY + 0.8;
   
